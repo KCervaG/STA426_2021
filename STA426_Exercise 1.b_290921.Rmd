@@ -1,0 +1,48 @@
+---
+title: "STA426 Exercise 1.B"
+author: "KCervaG"
+date: "9/28/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+###  Instructions
+
+1. _Create an HTML document that samples 100 values from a log-normal distribution (say, mu=1, sigma=.25)._ 
+
+2. _Create a histogram of the distribution and the distribution on the log scale 
+report the mean and variance of the sample in line in the text._
+
+
+**The following sample was created through the function rlnorm to obtain log-normal distributed values, mean, sd and variance.**
+
+#### _Rcode to generate random samples from a normal distribution_
+```{r rlnorm}
+rlnorm <- rlnorm(100, 1, 0.25)
+rlnorm
+mean (rlnorm)
+sd (rlnorm)
+var(rlnorm)
+```
+
+
+
+#### Sample characteristics
+
+The log-normal distributed sample randomly generated has a mean of 2.855466, a standard deviation of 0.6585066 and a variance of 0.433631.
+
+
+
+#### Sample distribution visualization
+
+Here, the hist function was used to generate  histograms of the distribution and log distribution of the rlnorm sample. plot function was used to visualize the 100 samples generated.
+
+```{r histogram}
+hist (rlnorm)
+hist(log(rlnorm))
+plot(rlnorm, type='h')
+plot(rlnorm, log = "y", type = 'h')
+```
+
